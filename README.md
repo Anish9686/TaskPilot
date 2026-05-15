@@ -9,12 +9,11 @@ The project focuses on practical workflows, responsive UI, and clean CRUD functi
 
 ## Live Demo
 
-🔗 https://your-live-url.vercel.app
+🔗 https://task-pilot-vert.vercel.app
 
 ## Repository
 
-🔗 https://github.com/yourusername/TaskPilot
-
+🔗 https://github.com/Anish9686
 ---
 
 ## Demo Credentials
