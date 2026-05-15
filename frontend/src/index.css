@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Sage & Stone Palette - Refined for High Density */
+  --color-primary-50: #fbfbf9;
+  --color-primary-100: #f5f3ee;
+  --color-primary-200: #eae4da;
+  --color-primary-300: #d8d2c8;
+  --color-primary-400: #a19a91;
+  --color-primary-500: #7a8f7b; 
+  --color-primary-600: #6b705c;
+  --color-primary-700: #555a4a;
+  --color-primary-800: #3f4237;
+  --color-primary-900: #111827;
+
+  /* Neutrals */
+  --color-slate-50: #fbfbf9;
+  --color-slate-100: #f1f1f1;
+  --color-slate-200: #e5e5e5;
+  --color-slate-300: #d4d4d4;
+  --color-slate-400: #a3a3a3;
+  --color-slate-500: #737373;
+  --color-slate-600: #525252;
+  --color-slate-700: #404040;
+  --color-slate-800: #262626;
+  --color-slate-900: #171717;
+
+  /* Accents */
+  --color-sage: #7a8f7b;
+  --color-olive: #6b705c;
+  --color-charcoal: #171717;
+  
+  /* Animations */
+  --animate-shimmer: shimmer 2s infinite linear;
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-primary-50 text-slate-900 min-h-screen antialiased text-sm;
+    background-image: none; /* Removed cinematic gradients for realism */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    @apply block w-full px-3 py-2 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-primary-500/10 focus:border-primary-500 focus:outline-none transition-all duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200 active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed font-semibold;
+  }
+}
+
+@layer components {
+  .premium-card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm hover:border-slate-300 transition-all duration-300;
+  }
+
+  .table-row {
+    @apply border-b border-slate-100 hover:bg-slate-50 transition-colors duration-150;
+  }
+
+  .compact-badge {
+    @apply px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border;
+  }
+}
+
+/* Custom Scrollbar - Tighter for density */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}
