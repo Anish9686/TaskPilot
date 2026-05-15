@@ -3,7 +3,7 @@ import axios from 'axios';
 // Use relative path to leverage Vite proxy in development
 // and production-level routing if hosted together
 const axiosInstance = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
   },

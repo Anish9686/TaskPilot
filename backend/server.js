@@ -30,7 +30,11 @@ app.use(express.json());
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || '*',
+  origin: [
+    "http://localhost:5173",
+    "https://task-pilot-psi.vercel.app",
+    process.env.CLIENT_URL
+  ].filter(Boolean),
   credentials: true
 }));
 
